@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Planner App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📚 Study Planner</h1>
+
+    <form id="plannerForm">
+        <div class="option-group">
+            <p>Today is:</p>
+            <div class="option-row">
+                <label><input type="radio" name="dayType" value="working" checked> Working Day</label>
+                <label><input type="radio" name="dayType" value="leave"> Leave Day</label>
+            </div>
+        </div>
+
+        <div class="option-group">
+            <p>Student type:</p>
+            <div class="option-row">
+                <label><input type="radio" name="userType" value="college" checked> College</label>
+                <label><input type="radio" name="userType" value="school"> School</label>
+            </div>
+        </div>
+
+        <label>Wake Up Time:</label>
+        <input type="time" id="wakeUp" required>
+
+        <label>Breakfast Time:</label>
+        <input type="time" id="breakfast" required>
+
+        <div id="schoolFields">
+            <label id="schoolStartLabel">College/School Start:</label>
+            <input type="time" id="collegeStart" required>
+
+            <label id="schoolEndLabel">College/School End:</label>
+            <input type="time" id="collegeEnd" required>
+        </div>
+
+        <div class="option-group">
+            <p>Do you have extracurricular activity?</p>
+            <div class="option-row">
+                <label><input type="radio" name="hasActivity" value="yes" checked> Yes</label>
+                <label><input type="radio" name="hasActivity" value="no"> No</label>
+            </div>
+        </div>
+
+        <div id="activityFields">
+            <label>Extracurricular Activity Time:</label>
+            <input type="time" id="activity">
+        </div>
+
+        <label>Dinner Time:</label>
+        <input type="time" id="dinner" required>
+
+        <button type="submit">Generate Plan</button>
+    </form>
+
+    <div id="output"></div>
+    <div id="aiChat" class="chat-box"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
